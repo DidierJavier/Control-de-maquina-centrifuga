@@ -1,0 +1,28 @@
+Potenciómetro tiempo 
+tiempo        Entrada análoga    Voltaje
+    60s                       975                      4.76                     
+    10s                       615                        3V          
+
+p1(615,10)     p2(975,60)               m= (60-10)/(975-615) = 0.1389
+
+y = mx + b       10 = 0.1389*615 + b            b= -75.4235
+
+y = 0.1389x -75.4235 (Ecuación de selección de tiempo)
+
+Potenciómetro Velocidad  
+Entrada(V)        Variador Vel(entrada análoga)   Salida(PWM)     %velocidad
+          5                                   1023                                          255                                100%
+          3                                     615                                           0                                        0%  
+                                                                                                                                       
+
+
+Velocidad hasta el 100% máximo
+p1(1023,255)       p2(615,0)      m = (0-255)/(615-1023) = 0.625
+
+0 = 0.625*615 +b      b= - 384.375               y = 0.625 x - 384.375      (Ecuación de selección de velocidad)
+
+Porcentaje de velocidad:
+p1(255, 100)    p2(0,0)      m= (0-100)/(0-255)=  0.392157        0 = 0.392157*0 + b              b= 0
+
+y = 0.392157x (% de velocidad)          
+
